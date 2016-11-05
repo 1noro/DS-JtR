@@ -1,0 +1,8 @@
+require 'rake/testtask'
+
+Rake::TestTask.new do |t|
+    t.libs << "tests"
+    t.test_files = FileList[    'tests/ex4/test*.rb',
+                                'tests/ex5/test*.rb'    ]
+    t.verbose = true
+end

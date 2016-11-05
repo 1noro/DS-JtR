@@ -1,0 +1,36 @@
+
+#tipo numerado (de aquella manera)
+Euro={
+	EURO2:{
+		name:'EURO2',
+		value:200
+	},
+	EURO1:{
+		name:'EURO1',
+		value:100
+	},
+	CENT50:{
+		name:'CENT50',
+		value:50
+	},
+	CENT20:{
+		name:'CENT20',
+		value:20
+	},
+	CENT10:{
+		name:'CENT10',
+		value:10
+	},
+	CENT5:{
+		name:'CENT5',
+		value:5
+	},
+	CENT2:{
+		name:'CENT2',
+		value:2
+	},
+	CENT1:{
+		name:'CENT1',
+		value:1
+	}
+}
