@@ -35,7 +35,7 @@ def main
     # --- EX5 ---------------------------------------------------------------
     print "\n### EX5 ###\n\n"
 
-	paco=Cliente.new('Paco','Perez','Lozano','O Canal 23, Cecebre',
+	paco=Cliente.new('Paco','Perez','Lozano','Roarrg 666, Mordor',
         '48111663A','655334789',1)
 
     # puts paco.getNombre+' '+paco.getApellido1

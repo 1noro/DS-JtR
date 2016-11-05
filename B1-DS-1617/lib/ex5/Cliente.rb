@@ -30,4 +30,24 @@ class Cliente < Persona
         "N Compras:\t\t#{@@numCompras}\nCod. Cliente:\t\t#{@codCliente}"
     end
 
+    def compra
+        @@numCompras+=1
+    end
+
+    def setNumCompras(n)
+        @@numCompras=n
+    end
+
+    def getNumCompras
+        return @@numCompras
+    end
+
+    def setCodCliente(n)
+        @codCliente=n
+    end
+
+    def getCodCliente
+        return @codCliente
+    end
+
 end
