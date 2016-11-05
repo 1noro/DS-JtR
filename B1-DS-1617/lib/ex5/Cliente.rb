@@ -3,8 +3,6 @@
 
 class Cliente < Persona
 
-    @@numCompras=0
-
     def initialize(
         nNombre,
         nApellido1,
@@ -21,33 +19,34 @@ class Cliente < Persona
         @dni=nDni
         @telefono=nTelefono
         @codCliente=nCodCliente
+        @numCompras=0
 
     end
 
     def toString
         return "Nombre:\t\t#{@nombre}\nApellidos:\t#{@apellido1} #{@apellido2}\n"\
         "Direccion:\t#{@direccion}\nDNI:\t\t#{@dni}\nTelefono:\t#{@telefono}\n"\
-        "N Compras:\t\t#{@@numCompras}\nCod. Cliente:\t\t#{@codCliente}"
+        "N Compras:\t\t#{@numCompras}\nCod. Cliente:\t\t#{@codCliente}"
     end
 
     def compra
-        @@numCompras+=1
-    end
-
-    def setNumCompras(n)
-        @@numCompras=n
+        @numCompras+=1
     end
 
     def getNumCompras
-        return @@numCompras
+        return @numCompras
     end
 
-    def setCodCliente(n)
-        @codCliente=n
+    def setNumCompras(n)
+        @numCompras=n
     end
 
     def getCodCliente
         return @codCliente
+    end
+
+    def setCodCliente(n)
+        @codCliente=n
     end
 
 end

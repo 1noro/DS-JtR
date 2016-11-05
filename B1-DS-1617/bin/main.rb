@@ -6,7 +6,11 @@ require 'ex4/Euro'
 require 'ex4/Monedero'
 
 require 'ex5/Persona'
+require 'ex5/Trabajador'
 require 'ex5/Cliente'
+require 'ex5/Dependiente'
+require 'ex5/Especialidad'
+require 'ex5/Turno'
 
 def main
 
@@ -41,6 +45,19 @@ def main
     # puts paco.getNombre+' '+paco.getApellido1
 
     print paco.toString+"\n"
+
+    paco.compra
+    paco.compra
+
+    puts paco.getNumCompras
+
+    print "\n"
+
+    pepe=Dependiente.new('Pepe','Ramirez','Gabilondo','O Quergo 21, Arousa',
+        '51555334U','489256471',Especialidad[:caja],'66666666X',
+        1200,Turno[:noche])
+
+    print pepe.toString+"\n"
 
 end
 
