@@ -13,7 +13,12 @@ class Trabajador < Persona
     end
 
     def getSalario
-        return @salario
+        if @turno[:name]=="noche"
+            out=@salario+150
+        else
+            out=@salario
+        end
+        return out
     end
 
     def setSalario(n)
@@ -25,7 +30,7 @@ class Trabajador < Persona
     end
 
     def setTurno(n)
-        @salario=n
+        @turno=n
     end
 
 end

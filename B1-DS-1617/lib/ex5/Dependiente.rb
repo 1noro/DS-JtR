@@ -31,18 +31,12 @@ class Dependiente < Trabajador
     end
 
     def toString
-        return "Nombre:\t\t#{@nombre}\nApellidos:\t#{@apellido1} #{@apellido2}\n"\
-        "Direccion:\t#{@direccion}\nDNI:\t\t#{@dni}\nTelefono:\t#{@telefono}\n"\
-        "Especialidad:\t#{@especialidad[:name]}\nN. Seg. Soc.:\t#{@nSS}\n"\
-        "Salario:\t#{@salario} euros\nTurno:\t\t#{@turno[:name]}"
-    end
-
-    def getTurno
-        return @turno
-    end
-
-    def setTurno(n)
-        @turno=n
+        return "Nombre:\t\t#{self.getNombre}\nApellidos:\t"\
+        "#{self.getApellido1} #{self.getApellido2}\nDireccion:\t"\
+        "#{self.getDireccion}\nDNI:\t\t#{self.getDni}\nTelefono:\t"\
+        "#{self.getTelefono}\nEspecialidad:\t#{self.getEspecialidad[:name]}\n"\
+        "N. Seg. Soc.:\t#{self.getNSS}\nSalario:\t#{self.getSalario} euros\n"\
+        "Turno:\t\t#{self.getTurno[:name]}"
     end
 
     def getEspecialidad

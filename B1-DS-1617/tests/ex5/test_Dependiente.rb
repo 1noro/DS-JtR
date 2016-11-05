@@ -98,6 +98,36 @@ class TestDependiente < Test::Unit::TestCase
         assert_equal("618681585",o.getTelefono)
     end
 
+    def test_getNSS()
+        o = Dependiente.new('Pepe','Ramirez','Gabilondo','O Quergo 21, Arousa',
+            '51555334U','489256471',Especialidad[:caja],'66666666X',
+            1200,Turno[:noche])
+        assert_equal("66666666X",o.getNSS)
+    end
+
+    def test_setNSS()
+        o = Dependiente.new('Pepe','Ramirez','Gabilondo','O Quergo 21, Arousa',
+            '51555334U','489256471',Especialidad[:caja],'66666666X',
+            1200,Turno[:noche])
+        o.setNSS("77777777A")
+        assert_equal("77777777A",o.getNSS)
+    end
+
+    def test_getSalario()
+        o = Dependiente.new('Pepe','Ramirez','Gabilondo','O Quergo 21, Arousa',
+            '51555334U','489256471',Especialidad[:caja],'66666666X',
+            1200,Turno[:noche])
+        assert_equal(1350,o.getSalario)
+    end
+
+    def test_setSalario()
+        o = Dependiente.new('Pepe','Ramirez','Gabilondo','O Quergo 21, Arousa',
+            '51555334U','489256471',Especialidad[:caja],'66666666X',
+            1200,Turno[:noche])
+        o.setSalario(2000)
+        assert_equal(2150,o.getSalario)
+    end
+
     def test_getTurno()
         o = Dependiente.new('Pepe','Ramirez','Gabilondo','O Quergo 21, Arousa',
             '51555334U','489256471',Especialidad[:caja],'66666666X',
@@ -120,7 +150,7 @@ class TestDependiente < Test::Unit::TestCase
         assert_equal("Nombre:\t\tPepe\nApellidos:\tRamirez Gabilondo\n"\
             "Direccion:\tO Quergo 21, Arousa\nDNI:\t\t51555334U\nTelefono:"\
             "\t489256471\nEspecialidad:\tcaja\nN. Seg. Soc.:\t66666666X\n"\
-            "Salario:\t1200 euros\nTurno:\t\tnoche", o.toString)
+            "Salario:\t1350 euros\nTurno:\t\tnoche", o.toString)
     end
 
     def test_getEspecialidad()

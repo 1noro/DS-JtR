@@ -1,7 +1,8 @@
 
-# require 'ex5/Persona'
+# require 'ex5/Trabajador'
+# require 'ex5/Turno'
 
-class Cliente < Persona
+class Reponedor < Trabajador
 
     def initialize(
         nNombre,
@@ -10,7 +11,10 @@ class Cliente < Persona
         nDireccion,
         nDni,
         nTelefono,
-        nCodCliente   )
+        nInfoEmpresa,
+        nNSS,
+        nSalario,
+        nTurno   )
 
         @nombre=nNombre
         @apellido1=nApellido1
@@ -18,8 +22,10 @@ class Cliente < Persona
         @direccion=nDireccion
         @dni=nDni
         @telefono=nTelefono
-        @codCliente=nCodCliente
-        @numCompras=0
+        @infoEmpresa=nInfoEmpresa
+        @nSS=nNSS
+        @salario=nSalario
+        @turno=nTurno
 
     end
 
@@ -27,28 +33,17 @@ class Cliente < Persona
         return "Nombre:\t\t#{self.getNombre}\nApellidos:\t"\
         "#{self.getApellido1} #{self.getApellido2}\nDireccion:\t"\
         "#{self.getDireccion}\nDNI:\t\t#{self.getDni}\nTelefono:\t"\
-        "#{self.getTelefono}\nN Compras:\t\t#{self.getNumCompras}\n"\
-        "Cod. Cliente:\t\t#{self.getCodCliente}"
+        "#{self.getTelefono}\nInfo. Empresa:\t#{self.getInfoEmpresa}\n"\
+        "N. Seg. Soc.:\t#{self.getNSS}\nSalario:\t#{self.getSalario} euros\n"\
+        "Turno:\t\t#{self.getTurno[:name]}"
     end
 
-    def compra
-        self.setNumCompras(self.getNumCompras+1)
+    def getInfoEmpresa
+        return @infoEmpresa
     end
 
-    def getNumCompras
-        return @numCompras
-    end
-
-    def setNumCompras(n)
-        @numCompras=n
-    end
-
-    def getCodCliente
-        return @codCliente
-    end
-
-    def setCodCliente(n)
-        @codCliente=n
+    def setInfoEmpresa(n)
+        @infoEmpresa=n
     end
 
 end
